@@ -3,29 +3,14 @@ Enhanced styling components for popular framework [`react-admin`](https://github
 
 No extra dependencies are required except the ones react-admin is already using.
 
+** This version forked by cadetstar, adding enhancements for enabling the use of Typography and other static text. See original repository at https://github.com/ValentinnDimitroff/ra-compact-ui
+
 Why using? 
  - reduces styling boilerplate code
  - eases layout customizations 
  - maintains native usage of built-in `react-admin` components
 
-[![npm version](https://img.shields.io/npm/v/ra-compact-ui.svg)](https://www.npmjs.com/package/ra-compact-ui)
-[![npm downloads](https://img.shields.io/npm/dm/ra-compact-ui.svg)](https://www.npmjs.com/package/ra-compact-ui)
-[![GitHub license](https://img.shields.io/github/license/ValentinnDimitroff/ra-compact-ui.svg)](https://github.com/ValentinnDimitroff/ra-compact-ui/blob/master/LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/ValentinnDimitroff/ra-compact-ui/)
-[![minzipped size](https://badgen.net/bundlephobia/minzip/ra-compact-ui)](https://bundlephobia.com/result?p=ra-compact-ui)
-
 Actively maintained and developed with monthly releases!
-
-## Installation
-
-Available as a npm package. You can install it using:
-
-```sh
-npm install ra-compact-ui
-#or
-yarn add ra-compact-ui
-```
-
 
 ## Details View components
 

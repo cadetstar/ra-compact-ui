@@ -1,6 +1,6 @@
 import { Children, isValidElement, cloneElement } from 'react';
 
-export const cloneRecursively = (child, conditionFnc, renderFnc) => (
+export const cloneRecursively = (child, conditionFnc, renderFnc, ignoreFnc = () => false) => (
     child
         && isValidElement(child)
         ? recursivelyFindRealChildren(
@@ -8,6 +8,7 @@ export const cloneRecursively = (child, conditionFnc, renderFnc) => (
                 child,
                 renderFnc,
                 conditionFnc,
+                ignoreFnc,
             },
         )
         : null
@@ -15,7 +16,7 @@ export const cloneRecursively = (child, conditionFnc, renderFnc) => (
 
 const recursivelyFindRealChildren = ({ child, ...props }) => {
     // Extract props for local usage but remain in props to get passed forward
-    const { conditionFnc, renderFnc } = props;
+    const { conditionFnc, renderFnc, ignoreFnc } = props;
 
     if (conditionFnc(child)) {
         // Clone current layout element and continue traversing children
@@ -32,6 +33,9 @@ const recursivelyFindRealChildren = ({ child, ...props }) => {
                         ...props,
                     }),
         });
+    }
+    if (ignoreFnc(child)) {
+        return child // Just simple return, no recursion or applying the field props
     }
 
     // Non-layout element found - recursion's bottom

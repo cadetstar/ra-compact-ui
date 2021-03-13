@@ -18,6 +18,7 @@ const sanitizeRestProps = ({
 
 const CompactShowLayout = ({
     layoutComponents,
+    ignoredComponents,
     basePath,
     className,
     children,
@@ -27,6 +28,7 @@ const CompactShowLayout = ({
     ...rest
 }) => {
     const layoutComponentsNamesArr = getComponentsNames(layoutComponents);
+    const ignoredComponentsNamesArr = getComponentsNames(ignoredComponents);
 
     return (
         <CardContentInner className={className} key={version} {...sanitizeRestProps(rest)}>
@@ -43,6 +45,7 @@ const CompactShowLayout = ({
                             resource={resource}
                         />
                     ),
+                    (x) => isComponentInNamedAry(x, ignoredComponentsNamesArr)
                 ),
             )}
         </CardContentInner>
