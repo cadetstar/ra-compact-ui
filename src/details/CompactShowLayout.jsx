@@ -2,7 +2,7 @@ import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 import { CardContentInner } from 'react-admin';
 import RaField from './RaField';
-import { cloneRecursively, getComponentsNames, isLayoutComponent } from '../core';
+import { cloneRecursively, getComponentsNames, isLayoutComponent, isComponentInNamedAry } from '../core';
 
 const sanitizeRestProps = ({
     children,
