@@ -49,7 +49,7 @@
         "prettier": "prettier  --config prettier.config.js --write ./src/",
         "run-demo": "cd examples/demo && yarn start"
     },
-    "repository": "https://github.com/ValentinnDimitroff/ra-compact-ui.git",
-    "author": "Valentin Dimitroff",
+    "repository": "https://github.com/cadetstar/ra-compact-ui.git",
+    "author": "Michael Madison",
     "license": "MIT"
 }
