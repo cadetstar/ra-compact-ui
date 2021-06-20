@@ -47,8 +47,7 @@
         "babel-transpile": "babel src -d dist",
         "build": "rimraf ./dist && yarn babel-transpile",
         "prettier": "prettier  --config prettier.config.js --write ./src/",
-        "run-demo": "cd examples/demo && yarn start",
-        "prepack": "yarn build"
+        "run-demo": "cd examples/demo && yarn start"
     },
     "repository": "https://github.com/cadetstar/ra-compact-ui.git",
     "author": "Michael Madison",
