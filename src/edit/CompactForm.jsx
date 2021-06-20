@@ -52,9 +52,11 @@ const CompactFormView = ({
     undoable,
     variant,
     layoutComponents,
+    ignoredComponents,
     ...rest
 }) => {
     const layoutComponentsNamesArr = getComponentsNames(layoutComponents);
+    const ignoredComponentsNamesArr = getComponentsNames(ignoredComponents);
 
     return (
         <form
@@ -77,6 +79,7 @@ const CompactFormView = ({
                                 margin={x.props.margin || margin}
                             />
                         ),
+                        (x) => isComponentInNamedAry(x, ignoredComponentsNamesArr)
                     ),
                 )}
             </Component>
@@ -125,6 +128,7 @@ CompactFormView.propTypes = {
     variant: PropTypes.string,
     margin: PropTypes.string,
     layoutComponents: PropTypes.array,
+    ignoredComponents: PropTypes.array,
 };
 
 CompactFormView.defaultProps = {

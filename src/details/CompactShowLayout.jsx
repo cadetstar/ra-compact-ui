@@ -59,6 +59,7 @@ CompactShowLayout.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     layoutComponents: PropTypes.array,
+    ignoredComponents: PropTypes.array
 };
 
 export default CompactShowLayout;
