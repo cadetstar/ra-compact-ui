@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { FormWithRedirect } from 'ra-core';
 import { CardContentInner, FormInput, Toolbar } from 'react-admin';
-import { cloneRecursively, getComponentsNames, isLayoutComponent } from '../core';
+import { cloneRecursively, getComponentsNames, isLayoutComponent, isComponentInNamedAry } from '../core';
 
 const CompactForm = (props) => (
     <FormWithRedirect

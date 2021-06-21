@@ -95,7 +95,7 @@ var CompactFormView = function CompactFormView(_ref) {
         margin: x.props.margin || margin
       });
     }, function (x) {
-      return isComponentInNamedAry(x, ignoredComponentsNamesArr);
+      return (0, _core.isComponentInNamedAry)(x, ignoredComponentsNamesArr);
     });
   })), toolbar && /*#__PURE__*/(0, _react.cloneElement)(toolbar, {
     basePath: basePath,
