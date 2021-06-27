@@ -43,13 +43,11 @@ var recursivelyFindRealChildren = function recursivelyFindRealChildren(_ref) {
   if (conditionFnc(child)) {
     // Clone current layout element and continue traversing children
     return /*#__PURE__*/(0, _react.cloneElement)(child, {
-      children: _react.Children.count(child.props.children) > 1 ? child.props.children.map(function (innerChild) {
+      children: React.Children.map(child.props.children, function (innerChild) {
         return recursivelyFindRealChildren(_objectSpread({
           child: innerChild
         }, props));
-      }) : recursivelyFindRealChildren(_objectSpread({
-        child: child.props.children
-      }, props))
+      })
     });
   }
 
